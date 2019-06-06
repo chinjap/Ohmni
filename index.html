@@ -37,9 +37,9 @@ Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(512, 200); }
 <button onclick="Neck_movement()">Neck movement</button> <script>
 function Neck_movement() {
 Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(650, 200); 
-Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(512, 200);
-Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(400, 200);
-Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(650, 200);}
+  Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(512, 200);
+  Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(400, 200);
+  Ohmni.setNeckTorqueEnabled(1);Ohmni.setNeckPosition(650, 200);}
 </script><br/>  
 <br/>  
 <button onclick="Change_LED()">change LED color</button> <script>
@@ -49,6 +49,12 @@ Ohmni.setLightColor(30,230,100); }
 <br/> 
 <button onclick="speak()">speak</button> <script>
 function speak() {
+Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Good morning!");</script>
+<br/>
+<button onclick="speak_change()">speak_change</button> <script>
+function speak_change() {
 Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("你好");
-</script><br/>
+  Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Good morning!");</script>
+<br/>
+  
 </html>
