@@ -48,13 +48,12 @@ Ohmni.setLightColor(30,230,100); }
 </script><br/>
 <br/> 
 <button onclick="speak()">speak</button> <script>
-function speak() {
-Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Good morning!");</script>
-<br/>
+function speak() {Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Good morning!");}
+</script><br/>
 <button onclick="speak_change()">speak_change</button> <script>
 function speak_change() {
-Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("你好");
-  Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Good morning!");</script>
+Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("你好");Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Good morning!");}
+</script>
 <br/>
   
 </html>
