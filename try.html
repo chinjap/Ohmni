@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script></head>
+
+
+
+
+<body>
+
+<img width="1280" height="800" src="https://lovingonme.com/2017/wp-content/uploads/2013/04/smile.jpg">
+<script>function speaka(input_zhongwen, neck){
+                         if (neck=0){
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
+                         else if (neck=1){
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
+                         else {
+                         setNeckTorqueEnabled(1); Ohmni.setNeckPosition(650,200);}
+                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("input_zhongwen);
+                         }
+
+
+setTimeout(speaka("大家好，我是今天的主持人",0),5000);
+setTimeout(speaka("很高兴和大家见面",1),1000);
+</script>
+
+</body>
+</html>
