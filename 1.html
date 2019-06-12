@@ -5,31 +5,29 @@
 
 <script src="https://app.ohmnilabs.com/api/Ohmni-standalone.js"></script></head>
 
-
-
-
 <body>
 
 <img width="1280" height="800" src="https://lovingonme.com/2017/wp-content/uploads/2013/04/smile.jpg">
-<script>function speaka(){Ohmni.move(500, 500, 3000);
-                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("你好,我是今天的主持人");
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(650,200);
-                         Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Olivia!");
+<script>function speak(input_zhongwen,input_yingwen,neck){
+                         if (neck>1){
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(650,200);}
+                         else if (neck<1){
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(350,200);}
+                         else {
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(510,200);
+                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
+                         Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
                          }
-setTimeout(speaka,5000);
+var chinese=["同学们大家好，我是今天的主持人","在咱们正式开始之前","先和同学们确认","一下声音和画面","如果大家现在可以","听到我的声音","看到正在分享的PPT","请在QA或者","中帮忙回复六六六确认一下","谢谢大家的反馈"]
+var english=["OWEN","","","","","","","Chat","",""]
+var i;
+for (i = 0; i < chinese.length; i++) {
+  delayTime(i);
+}
+  function delayTime(t){
+  setTimeout(function(){speak(chinese[t],english[t],t/2,t/2);},3000*t)
+  }
 </script>
-<script>function speakb(){Ohmni.move(-500, 500, 3000);
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(512,200);
-                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("很高心和大家见面");
-                         }
-setTimeout(speakb,13000);
-</script>
-  
-<script>function speakc(){Ohmni.move(500, -500, 3000);
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(350,200);
-                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("我可以说中文和英文");}
-setTimeout(speakc,21000);
-</script>
-  
+
 </body>
 </html>
