@@ -11,7 +11,7 @@
 <script>function speak(input_zhongwen,input_yingwen,neck){
                          if (neck==1){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
-                         else if (neck==1){
+                         else if (neck==0){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
                          Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
                          Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
