@@ -8,10 +8,16 @@
 <body>
 
 <img width="426" height="280" src="https://img1.sendscraps.com/se/114/001.jpg">
-<script>function speak(){Ohmni.move(500, -500, 3000);
-                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("同学们大家好，在咱们正式开始之前先和同学们确认一下声音和画面，如果大家现在可以听到我的声音，看到正在分享的PPT，请在QA 或者 Chat 中帮忙回复666确认一下，谢谢大家的反馈。");
+<script>function speaka(){Ohmni.move(500, 500, 3000);
+                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("同学们大家好，在咱们正式开始之前先和同学们确认一下声音和画面，如果大家现在可以听到我的声音，看到正在分享的PPT，请在QA 或者");
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
-setTimeout(speak,3000);
+        function speakb(){Ohmni.setSpeechLanguage("en-US"); Ohmni.say("Chat");
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
+        function speakc(){Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("中帮忙回复六六六确认一下，谢谢大家的反馈。");
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
+  setTimeout(speaka,3000);
+  setTimeout(speakb,10000);
+  setTimeout(speakc,13000);
 </script>
 </body>
 </html>
