@@ -10,11 +10,24 @@
 
 <body>
 
-<img width="852" height="720" src="https://cdn.pixabay.com/photo/2017/11/10/18/48/smile-2937308_960_720.jpg">
-<script>function speak(){Ohmni.move(-500, 500, 3000);
-                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say("你好，我是第三个网页");
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(350,200);}
-setTimeout(speak,3000);
+<img width="1280" height="800" src="https://cdn.pixabay.com/photo/2017/11/10/18/48/smile-2937308_960_720.jpg">
+<script>function speak(input_zhongwen,input_yingwen,neck){
+                         if (neck==1){
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
+                         else if (neck==1){
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
+                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
+                         Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
+                         }
+var chinese=["下面为大家介绍一下许老师","他是一个好老师","在今天的公开课中","老师会和同学们分享以下的一些知识点","首先打开书","其次看书","接下来合上书","","",""]
+var english=["","","","","","","","","",""]
+var i;
+for (i = 0; i < chinese.length; i++) {
+  delayTime(i);
+}
+  function delayTime(t){
+  setTimeout(function(){speak(chinese[t],english[t],t%2,t%2);},2000*t)
+  }
 </script>
 
 </body>
