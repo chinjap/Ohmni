@@ -8,24 +8,24 @@
 <body>
 
 <img width="1280" height="800" src="https://st2.depositphotos.com/3528685/6989/i/950/depositphotos_69890689-stock-photo-air-hostess-smiling.jpg">
-<script>function speak(input_zhongwen,input_yingwen,neck){
+<script>function speak(input_zhongwen,input_yingwen){Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
+                         Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
+                         }
+var chinese=["现在学院和AI聘进行深度合作,给同学们提供等等的服务,其中的特色项目是这个项目,在这个项目中,同学们可以找到工作再付费,并且在项目中,会使用人工智能和大数据给同学们,进行岗位匹配和竞争力分析,帮助同学们精准定位,并且求职辅导老师会在过程中全程辅导,感兴趣的同学可以通过屏幕下方的,联系方式和求职辅导老师取得联系911"]
+var english=[""]
+var i;
+for (i = 0; i < 6; i++) {
+  setTimeout(function(){neck(i%2);}3000*i)
+}
+
+
+function neck(neck){
                          if (neck==1){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
                          else if (neck==0){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
-                         Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
-                         Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
-                         }
-var chinese=["现在学院和AI聘进行深度合作","给同学们提供等等的服务","其中的特色项目是","项目，在这个项目中","同学们可以找到工作再付费","并且在项目中","会使用人工智能和大数据给同学们","进行岗位匹配和竞争力分析","帮助同学们精准定位","并且求职辅导老师会在过程中全程辅导","感兴趣的同学可以通过屏幕下方的","联系方式和求职辅导老师取得联系","911"]
-var english=["","","Career VIP","","","","","","","","","",""]
-var i;
-for (i = 0; i < chinese.length; i++) {
-  delayTime(i);
-}
-  function delayTime(t){
-  setTimeout(function(){speak(chinese[t],english[t],t%2,t%2);},2000*t)
-  }
-</script>
+                    }
 
+</script>
 </body>
 </html>
