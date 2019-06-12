@@ -18,14 +18,13 @@ for (i = 0; i < 6; i++) {
   setTimeout(function(){neck(i%2);}3000*i)
 }
 
-
 function neck(neck){
                          if (neck==1){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
                          else if (neck==0){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
                     }
-
+speak()
 </script>
 </body>
 </html>
