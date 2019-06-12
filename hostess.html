@@ -11,19 +11,13 @@
 <body>
 
 <img width="1280" height="800" src="https://lovingonme.com/2017/wp-content/uploads/2013/04/smile.jpg">
-<script>function speak(input_zhongwen,input_yingwen,neck,position){
+<script>function speak(input_zhongwen,input_yingwen,neck){
                          if (neck>1){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(650,200);}
                          else if (neck<1){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(350,200);}
                          else {
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(510,200);}
-                         if (position>1){
-                         Ohmni.move(500, -500, 2000);}
-                         else if (position<1){
-                         Ohmni.move(-500, 500, 2000);}
-                         else {
-                         Ohmni.move(500, 500, 2000);}
                          Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
                          Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
                          }
