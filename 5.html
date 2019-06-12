@@ -10,14 +10,14 @@
 <img width="1280" height="800" src="https://st2.depositphotos.com/3528685/6989/i/950/depositphotos_69890689-stock-photo-air-hostess-smiling.jpg">
 <script>function speak(input_zhongwen,input_yingwen,neck){
                          if (neck==1){
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(650,200);}
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(550,200);}
                          else if (neck==0){
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(350,200);}
+                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(450,200);}
                          Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
                          Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
                          }
-var chinese=["除了咱们的课程","在这边也鼓励同学们关注","由学院创办的微信公众号","大数据应用。咱们的公众号_______","感兴趣的同学可以扫描屏幕上的微信二维码关注","","","","",""]
-var english=["","","","","","","","","",""]
+var chinese=["除了咱们的课程","在这边也鼓励同学们关注","由学院创办的微信公众号","大数据应用。咱们的公众号_______","感兴趣的同学可以扫描屏幕上","的微信二维码关注"]
+var english=["","","","","",""]
 var i;
 for (i = 0; i < chinese.length; i++) {
   delayTime(i);
