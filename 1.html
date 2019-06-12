@@ -9,12 +9,11 @@
 
 <img width="1280" height="800" src="https://lovingonme.com/2017/wp-content/uploads/2013/04/smile.jpg">
 <script>function speak(input_zhongwen,input_yingwen,neck){
-                         if (neck>1){
+                         if (neck==1){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(650,200);}
-                         else if (neck<1){
+                         else if (neck==0){
                          Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(350,200);}
-                         else {
-                         Ohmni.setNeckTorqueEnabled(1); Ohmni.setNeckPosition(510,200);
+
                          Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
                          Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
                          }
@@ -25,7 +24,7 @@ for (i = 0; i < chinese.length; i++) {
   delayTime(i);
 }
   function delayTime(t){
-  setTimeout(function(){speak(chinese[t],english[t],t/2,t/2);},3000*t)
+  setTimeout(function(){speak(chinese[t],english[t],t%2,t%2);},3000*t)
   }
 </script>
 
