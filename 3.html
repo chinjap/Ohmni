@@ -19,14 +19,14 @@
                          Ohmni.setSpeechLanguage("zh-TW"); Ohmni.say(input_zhongwen);
                          Ohmni.setSpeechLanguage("en-US"); Ohmni.say(input_yingwen);
                          }
-var chinese=["下面为大家介绍一下许老师","他是一个好老师","在今天的公开课中","老师会和同学们分享以下的一些知识点","首先打开书","其次看书","接下来合上书","","",""]
-var english=["","","","","","","","","",""]
+var chinese=["下面为大家介绍一下许老师","他是一个好老师","在今天的公开课中","老师会和同学们分享以下的一些知识点","首先打开书","其次看书","接下来合上书"]
+var english=["","","","","","",""]
 var i;
 for (i = 0; i < chinese.length; i++) {
   delayTime(i);
 }
   function delayTime(t){
-  setTimeout(function(){speak(chinese[t],english[t],t%2,t%2);},3000*t)
+  setTimeout(function(){speak(chinese[t],english[t],t%2,t%2);},2000*t)
   }
 </script>
 
