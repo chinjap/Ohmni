@@ -11,11 +11,11 @@
 <script>
 var i;
 for (i = 0; i < 30; i++) {
-  setTimeout(function(){neck(i);},10000*i)
+  setTimeout(function(){neck(i%2);},10000*i)
 }
 function neck(t){
   Ohmni.setNeckTorqueEnabled(1);
-  if (t%2==1){
+  if (t==1){
     Ohmni.setNeckPosition(550,200);
   }
   else {
